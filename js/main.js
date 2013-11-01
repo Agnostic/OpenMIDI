@@ -19,9 +19,9 @@ $(document).ready(function() {
         }
 
         if( $(this).scrollTop() > 200 && !hiddenHero && !clickedBrowse ){
-          $('#hero').css('overflow', 'hidden');
-          $('#hero').animate({ height: 0, padding:0 }, 500);
-          $("html, body").animate({ scrollTop: 0 }, 500);
+          // $('#hero').css('overflow', 'hidden');
+          // $('#hero').animate({ height: 0, padding:0 }, 500);
+          // $("html, body").animate({ scrollTop: 0 }, 500);
           hiddenHero = true;
         }
     });
@@ -100,8 +100,8 @@ $(document).ready(function() {
                  scrollTop: target.offset().top-83
             }, 800, 'linear', function(){
               if(target.attr('id') === 'features'){
-                $("html, body").animate({ scrollTop: 0 }, 0);
-                $('#hero').remove();
+                // $("html, body").animate({ scrollTop: 0 }, 0);
+                // $('#hero').remove();
               }
             });
           } else {
@@ -112,27 +112,6 @@ $(document).ready(function() {
           return false;
         }
       }
-  });
-
-  // ==================== NEWSLETTER SIGNUP ==================== //
-    $("#newsletter-signup").submit(function() {
-    var str = $(this).serialize();
-    $.ajax({
-      type: "POST",
-      url: "assets/newsletter.php",
-      data: str,
-      success: function(msg) {
-        if(msg == 'OK') {
-          result = '<div class="alert alert-success">Yeeha, you are signed up!"</div>';
-          $(".input-group").hide();
-          setTimeout("location.reload(true);",7000);
-          } else {
-          result = msg;
-          }
-          $('#error-info').html(result);
-        }
-    });
-    return false;
   });
 
   // ==================== CONTACT FORM ==================== //

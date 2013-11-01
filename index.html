@@ -47,7 +47,7 @@
 				<!-- Collapsible list items - everything in the following div will hide in the dropdown button for mobile devices -->
 				<div id="navBar" class="nav-collapse collapse navbar-responsive-collapse animated fadeInRight">
 				  <ul class="nav navbar-nav pull-right">
-					  <li>
+					  <!-- <li>
 							<a href="#features">
 								<span class="glyphicon glyphicon-search"></span>Browse
 							</a>
@@ -56,14 +56,28 @@
 							<a href="#showcase">
 								<span class="glyphicon glyphicon-upload"></span>Upload
 							</a>
+						</li> -->
+						<li style="padding:0; padding-top:5px; margin-right:0; border-top:none !important;">
+							<div class="col-sm-12 clearfix">
+					 			<button class="btn btn-large col-sm-4 btn-warning pull-right">Search
+					 			</button>
+						 		<div class="col-sm-8 search-wrapper pull-right" style="margin-bottom:10px;">
+						 			<input type="search" class="col-sm-12" placeholder="Search...">
+						 			<span class="glyphicon glyphicon-search"></span>
+						 		</div>
+						 	</div>
 						</li>
-						<li>
+
+						<li style="padding:0; padding-top:5px; margin-right:0; border-top:none !important;">
+							<button class="btn btn-large btn-primary">Log In</button>
+						</li>
+						<!-- <li>
 							<a href="#contact">
 								<span class="glyphicon glyphicon-inbox"></span>
 								Contact
 							</a>
-						</li>
-						<li class="header-cta"><a href="#" class="btn btn-secondary">Sign In</a></li>
+						</li> -->
+						<!-- <li class="header-cta"><a href="#" class="btn btn-secondary">Sign In</a></li> -->
 				  </ul><!-- end nav -->
 				</div><!-- end nav-collapse -->
 			  </div><!-- end container -->
@@ -72,20 +86,23 @@
 		  </section><!-- end HEADER SECTION -->
 
 		  <!--////////// HERO SECTION ///////////-->
-		  <section id="hero" class="spacing">
-			<div class="container">
-				<div class="row">
+		  <!--section id="hero" class="spacing">
+				<div class="container">
+					<div class="row">
 
-				<div class="col-lg-10 col-lg-push-1 slide-right">
-					<div class="hero-quote">
-						<h1>¿What is OpenMIDI?</h1>
-						<p class="lead">OpenMIDI is a web platform where musicians and producers can share their compositions</p>
-					</div><!-- end hero-quote -->
-				</div><!-- end col-lg-10 col-offset-1 -->
+						<div class="col-lg-10 col-lg-push-1 slide-right">
+							<div class="hero-quote">
+								<h1>¿What is OpenMIDI?</h1>
+								<p class="lead">
+									OpenMIDI is a web platform where musicians and producers can share their compositions
+								</p>
+							</div>
+						</div>
 
-				</div><!-- end row -->
-			</div><!-- end container -->
-		  </section><!-- end HERO SECTION -->
+					</div>
+				</div>
+		  </section-->
+		  <!-- end HERO SECTION -->
 
 
 		   <!--////////// FEATURES SECTION ///////////-->
@@ -95,10 +112,10 @@
 				 <div class="row">
 
 				 	<div class="col-sm-3 slide-left animated fadeInLeft">
-				 		<div class="col-sm-12 search-wrapper">
+				 		<!--div class="col-sm-12 search-wrapper">
 				 			<input type="search" class="col-sm-12" placeholder="Search..."/>
 				 			<span class="glyphicon glyphicon-search"></span>
-				 		</div>
+				 		</div-->
 				 		<ul id="category-list" class="nav nav-tabs nav-stacked">
 				 			<li class="active">
 				 				<a href="#">All genres</a>
@@ -224,8 +241,35 @@
 
 				 			<li class="clearfix">
 				 				<a href="#" class="pull-left">
-					 				<div class="midi-preview" style="width:250px; height: 100px; background: lightgreen;">
-					 					MIDI PREVIEW
+					 				<div class="midi-preview" style="width:250px; background:#fff; height: 100px; overflow-x: hidden; overflow-y: auto;">
+					 					<div id="nav-piano" style="zoom:81%">
+										  <ul>
+										  	<li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										    <li class="black-tut"><span class="tut"></span></li>
+										    <li><span class="tut"></span></li>
+										  </ul>
+										</div>
 					 				</div>
 					 			</a>
 				 				<div class="pull-left midi-info">
