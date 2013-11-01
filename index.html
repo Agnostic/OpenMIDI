@@ -3,41 +3,387 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>OpenMIDI</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic' rel='stylesheet'>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style3.css">
+		<link rel="stylesheet" href="css/main.css">
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body id="home" data-spy="scroll" data-offset="83" data-target=".navbar">
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+		<!-- SCROLL TO TOP BUTTON -->
+		  <a href="#" class="scrollup">
+		  	<span data-icon="&#xe005;" aria-hidden="true"></span>
+		  </a>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-    </body>
+		  <!--////////// HEADER SECTION ///////////-->
+		  <section id="header">
+
+			<!-- Bootstrap's responsive navbar -->
+			<div class="navbar">
+			  <div class="container">
+
+				<a class="navbar-toggle btn btn-large animated fadeInRight" data-toggle="collapse" data-target=".navbar-responsive-collapse" href="#">
+				 <span data-icon="&#xe004;" aria-hidden="true"></span>
+				</a>
+
+				<!-- the logo - to put your own image, you need to change the image link in the style.css file -->
+				<a class="navbar-brand logo animated fadeInLeft" href="/">
+					<h1>OpenMIDI</h1>
+				</a>
+
+				<!-- Collapsible list items - everything in the following div will hide in the dropdown button for mobile devices -->
+				<div id="navBar" class="nav-collapse collapse navbar-responsive-collapse animated fadeInRight">
+				  <ul class="nav navbar-nav pull-right">
+					  <li>
+							<a href="#features">
+								<span class="glyphicon glyphicon-search"></span>Browse
+							</a>
+						</li>
+						<li>
+							<a href="#showcase">
+								<span class="glyphicon glyphicon-upload"></span>Upload
+							</a>
+						</li>
+						<li>
+							<a href="#contact">
+								<span class="glyphicon glyphicon-inbox"></span>
+								Contact
+							</a>
+						</li>
+						<li class="header-cta"><a href="#" class="btn btn-secondary">Sign In</a></li>
+				  </ul><!-- end nav -->
+				</div><!-- end nav-collapse -->
+			  </div><!-- end container -->
+			</div><!-- end navbar -->
+
+		  </section><!-- end HEADER SECTION -->
+
+		  <!--////////// HERO SECTION ///////////-->
+		  <section id="hero" class="spacing">
+			<div class="container">
+				<div class="row">
+
+				<div class="col-lg-10 col-lg-push-1 slide-right">
+					<div class="hero-quote">
+						<h1>¿What is OpenMIDI?</h1>
+						<p class="lead">OpenMIDI is a web platform where musicians and producers can share their compositions</p>
+					</div><!-- end hero-quote -->
+				</div><!-- end col-lg-10 col-offset-1 -->
+
+				</div><!-- end row -->
+			</div><!-- end container -->
+		  </section><!-- end HERO SECTION -->
+
+
+		   <!--////////// FEATURES SECTION ///////////-->
+		  <section id="features" class="spacing">
+				<div class="container">
+
+				 <div class="row">
+
+				 	<div class="col-sm-3 slide-left animated fadeInLeft">
+				 		<div class="col-sm-12 search-wrapper">
+				 			<input type="search" class="col-sm-12" placeholder="Search..."/>
+				 			<span class="glyphicon glyphicon-search"></span>
+				 		</div>
+				 		<ul id="category-list" class="nav nav-tabs nav-stacked">
+				 			<li class="active">
+				 				<a href="#">All genres</a>
+				 			</li>
+				 			<li>
+				 				<a href="#">Classical</a>
+				 			</li>
+				 			<li>
+				 				<a href="#">Electronic</a>
+				 			</li>
+				 			<li>
+				 				<a href="#">Experimental</a>
+				 			</li>
+				 		</ul>
+				 	</div>
+
+				 	<div class="col-sm-9 slide-right animated fadeInRight clearfix">
+				 		<ul class="nav nav-pills nav-justified">
+				 			<li class="active">
+				 				<a class="btn">Newest</a>
+				 			</li>
+				 			<li>
+				 				<a class="btn">Most Popular</a>
+				 			</li>
+				 		</ul>
+				 		<ul id="midi-list" class="list-unstyled" style="margin-top:10px; overflow-y:auto; overflow-x:hidden;">
+
+				 			<li class="clearfix">
+				 				<a href="#" class="pull-left">
+					 				<div class="midi-preview" style="width:250px; height: 100px; background: lightgreen;">
+					 					MIDI PREVIEW
+					 				</div>
+					 			</a>
+				 				<div class="pull-left midi-info">
+				 					<a href="#">
+				 						<h4>Amazing melody</h4>
+				 					</a>
+				 					<p class="lead">Melodía inspirada en algo muy interesante.</p>
+				 				</div>
+				 				<div class="pull-right midi-info2">
+				 					<p>
+					 					<!-- <b>By:&nbsp;&nbsp;</b> -->
+					 					<a href="#" class="midi-author">Gilberto Avalos</a>
+					 				</p>
+					 				<p>
+					 					<!-- <b>Added:&nbsp;&nbsp;</b> -->Oct 31th 2013
+					 				</p>
+					 				<p>
+					 					<!-- <b>Rating:&nbsp;&nbsp;</b> -->
+					 					<span class="midi-stars">
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 					</span>
+					 				</p>
+				 				</div>
+				 			</li>
+
+				 			<li class="clearfix">
+				 				<a href="#" class="pull-left">
+					 				<div class="midi-preview" style="width:250px; height: 100px; background: lightgreen;">
+					 					MIDI PREVIEW
+					 				</div>
+					 			</a>
+				 				<div class="pull-left midi-info">
+				 					<a href="#">
+				 						<h4>Amazing melody</h4>
+				 					</a>
+				 					<p class="lead">Melodía inspirada en algo muy interesante.</p>
+				 				</div>
+				 				<div class="pull-right midi-info2">
+				 					<p>
+					 					<!-- <b>By:&nbsp;&nbsp;</b> -->
+					 					<a href="#" class="midi-author">Gilberto Avalos</a>
+					 				</p>
+					 				<p>
+					 					<!-- <b>Added:&nbsp;&nbsp;</b> -->Oct 31th 2013
+					 				</p>
+					 				<p>
+					 					<!-- <b>Rating:&nbsp;&nbsp;</b> -->
+					 					<span class="midi-stars">
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 					</span>
+					 				</p>
+				 				</div>
+				 			</li>
+
+				 			<li class="clearfix">
+				 				<a href="#" class="pull-left">
+					 				<div class="midi-preview" style="width:250px; height: 100px; background: lightgreen;">
+					 					MIDI PREVIEW
+					 				</div>
+					 			</a>
+				 				<div class="pull-left midi-info">
+				 					<a href="#">
+				 						<h4>Amazing melody</h4>
+				 					</a>
+				 					<p class="lead">Melodía inspirada en algo muy interesante.</p>
+				 				</div>
+				 				<div class="pull-right midi-info2">
+				 					<p>
+					 					<!-- <b>By:&nbsp;&nbsp;</b> -->
+					 					<a href="#" class="midi-author">Gilberto Avalos</a>
+					 				</p>
+					 				<p>
+					 					<!-- <b>Added:&nbsp;&nbsp;</b> -->Oct 31th 2013
+					 				</p>
+					 				<p>
+					 					<!-- <b>Rating:&nbsp;&nbsp;</b> -->
+					 					<span class="midi-stars">
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 					</span>
+					 				</p>
+				 				</div>
+				 			</li>
+
+				 			<li class="clearfix">
+				 				<a href="#" class="pull-left">
+					 				<div class="midi-preview" style="width:250px; height: 100px; background: lightgreen;">
+					 					MIDI PREVIEW
+					 				</div>
+					 			</a>
+				 				<div class="pull-left midi-info">
+				 					<a href="#">
+				 						<h4>Amazing melody</h4>
+				 					</a>
+				 					<p class="lead">Melodía inspirada en algo muy interesante.</p>
+				 				</div>
+				 				<div class="pull-right midi-info2">
+				 					<p>
+					 					<!-- <b>By:&nbsp;&nbsp;</b> -->
+					 					<a href="#" class="midi-author">Gilberto Avalos</a>
+					 				</p>
+					 				<p>
+					 					<!-- <b>Added:&nbsp;&nbsp;</b> -->Oct 31th 2013
+					 				</p>
+					 				<p>
+					 					<!-- <b>Rating:&nbsp;&nbsp;</b> -->
+					 					<span class="midi-stars">
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 						<span class="glyphicon glyphicon-star-empty"></span>
+					 					</span>
+					 				</p>
+				 				</div>
+				 			</li>
+
+				 		<ul>
+				 	</div>
+
+				 </div><!-- end row -->
+
+				</div><!-- end container -->
+		  </section><!-- end FEATURES SECTION -->
+
+
+		  <!--////////// SHOWCASE SECTION ///////////-->
+		  <section id="showcase">
+				<div class="container">
+					<div class="row push-bottom">
+
+						<div class="title slide-down animated fadeInDown">
+						  <h1>Share your creativity</h1>
+						  <p class='lead' style="margin-top:15px;">
+								<button class="btn btn-default btn-large btn-success" type="submit" name="submit">UPLOAD MIDI</button>
+							</p>
+						</div><!-- end title -->
+						<div class="title-hr"></div>
+					</div><!-- end row -->
+				</div><!-- end container -->
+		  </section><!-- end SHOWCASE SECTION -->
+
+		  <!--////////// CONTACT SECTION //////////-->
+		  <section id="contact" class="spacing">
+			<div class="container">
+			  <div class="row">
+				<div class="title">
+				  <h1>Contact Us</h1>
+				  <p class="lead">Feel free to ask any questions via the contact form below.</p>
+				</div><!-- end title -->
+				<div class="title-hr-dark"></div>
+
+				<div class="col-sm-5">
+				  <h2>Our Contact Details</h2>
+				  <p class="lead">
+					<strong>Gilberto Avalos</strong> <br>
+					Phone: +55 669 9180410 <br>
+					<a href="mailto:avalosagnostic@gmail.com">avalosagnostic@gmail.com</a>
+				  </p>
+				  <hr>
+				</div><!-- end col-sm-7 -->
+
+				<div class="col-sm-7 contact-form">
+
+				  <div id="contact-error"></div>
+
+				  <form id="contact-form" class="form-horizontal"><!-- id="ajax-contact-form" -->
+					<div class="form-group">
+					  <label for="name" class="col-lg-3 control-label">Your Name</label>
+					  <div class="col-lg-9">
+						<input type="text" class="form-control" id="name" name="name" placeholder="">
+					  </div>
+					</div><!-- end form-group -->
+
+					<div class="form-group">
+					  <label for="email" class="col-lg-3 control-label">Your E-mail</label>
+					  <div class="col-lg-9">
+						<input type="text" class="form-control" id="email" name="email" placeholder="">
+					  </div>
+					</div><!-- end form-group -->
+
+					<div class="form-group textarea">
+					  <label for="message" class="col-lg-3 control-label">Message</label>
+					  <div class="col-lg-9">
+						<textarea class="form-control" id="message" name="message" rows="7" placeholder=""></textarea>
+					  </div>
+					</div><!-- end form-group -->
+
+					<input type="hidden" name="save" value="contact">
+					<button class="btn btn-large btn-primary contact-submit" type="submit" name="submit">Send it!</button>
+				  </form>
+
+				</div><!-- end col-sm-7 -->
+			  </div><!-- end row -->
+			</div><!-- end container -->
+		  </section><!-- end CONTACT SECTION -->
+
+
+		  <!--////////// FOOTER SECTION ///////////-->
+		  <section id="footer">
+			<div class="container">
+				<div class="row">
+
+				<div class="col-lg-8 copyright">
+					  <p>&copy; 2013 <a href="/">OpenMIDI</a> | All Rights Reserved. Developed by <a href="http://www.linkedin.com/in/avalos1" target="_blank">Gilberto Avalos</a></p>
+				</div>
+				<div class="col-lg-4 social-links">
+				  <ul class="social-links">
+					<!-- Replace the links below with your own social media links -->
+					<li><a href="http://www.facebook.com/gilberto.avalos" target="_blank"><span data-icon="&#xf005;" aria-hidden="true"></span></a></li>
+					<li><a href="http://www.twitter.com/agnosticmusic" target="_blank"><span data-icon="&#xf006;" aria-hidden="true"></span></a></li>
+					<li><a href="http://google.com/+gavalos" target="_blank"><span data-icon="&#xf007;" aria-hidden="true"></span></a></li>
+				  </ul>
+				</div>
+
+				</div><!-- end row -->
+			</div><!-- end container -->
+		  </section><!-- end FOOTER SECTION -->
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/jquery.inview.js"></script>
+		<script src="js/vendor/jquery.flexslider.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+
+		<script type="text/javascript">
+		  $(window).load(function() {
+			$('#main-slider').flexslider({
+			});
+			$('.flexslider').flexslider({
+				animation: 'slide'
+			});
+		  });
+		</script>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X');ga('send','pageview');
+		</script>
+	</body>
 </html>
