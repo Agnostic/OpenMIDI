@@ -78,6 +78,11 @@
 
 .search-wrapper input{
     padding: 9px;
+    border-bottom: solid 2px #EEE;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom: 7px;
     font-size: 16px;
     background:#F8F8F8;
     color: #000;
@@ -91,8 +96,29 @@
     top:1px;
 }
 
+.midi-preview{
+  width:250px;
+  background:#fff;
+  height: 100px;
+  overflow: hidden;
+  position:relative;
+}
+
+.midi-preview .play-midi{
+  position:absolute;
+  left:100px;
+  top:35px;
+  z-index:1000;
+}
+
+.midi-preview > img{
+  margin:0;
+}
+
 /* Piano */
-#nav-piano {
+.piano-midi {
+  zoom:81%;
+  opacity:0.5;
   display:block;
   background-color:#222;
   /*background-image:linear-gradient(60deg,#111,#333,#111,#3c3c3c,#333 70%);*/
@@ -107,18 +133,18 @@
   margin-bottom:200px;*/
 }
 
-#nav-piano ul,
-#nav-piano li {
+.piano-midi ul,
+.piano-midi li {
   margin:0;
   padding:0;
   list-style:none;
   position:relative;
 }
 
-#nav-piano ul {box-shadow:0 2px 5px black}
+.piano-midi ul {box-shadow:0 2px 5px black}
 
-#nav-piano a,
-#nav-piano .tut {
+.piano-midi a,
+.piano-midi .tut {
   display:block;
   height:40px;
   padding:0 18px 0 0;
@@ -137,11 +163,11 @@
   overflow:hidden;
 }
 
-#nav-piano a:focus,
-#nav-piano a:active {outline:none}
+.piano-midi a:focus,
+.piano-midi a:active {outline:none}
 
-#nav-piano .black-tut a,
-#nav-piano .black-tut .tut {
+.piano-midi .black-tut a,
+.piano-midi .black-tut .tut {
   width:58%;
   z-index:2;
   background-color:#111;
@@ -159,18 +185,18 @@
   box-shadow:inset -1px 0 2px rgba(255,255,255,.4),2px 0 3px rgba(0,0,0,.4);
 }
 
-#nav-piano a:active {
+.piano-midi a:active {
   background-color:#f5f5f5;
   margin-right:1px;
   box-shadow:0 2px 2px rgba(0,0,0,.4);
 }
-#nav-piano .black-tut a:active {
+.piano-midi .black-tut a:active {
   border-right-width:2px;
   left:-2px;
   box-shadow:inset -1px 0 1px rgba(255,255,255,.4),1px 0 0 rgba(0,0,0,.8),0 0 2px rgba(0,0,0,.4),1px 0 0 black;
 }
 
-#nav-piano li ul {
+.piano-midi li ul {
   position:absolute;
   top:-10px;
   left:100%;
@@ -185,8 +211,8 @@
   transition:all .2s ease-out;
 }
 
-#nav-piano li ul a,
-#nav-piano li ul a:active {
+.piano-midi li ul a,
+.piano-midi li ul a:active {
   background:none;
   border:none;
   border-radius:0;
@@ -199,8 +225,8 @@
 }
 
 /* Depth Shadow */
-#nav-piano > ul > li > a:active:before,
-#nav-piano > ul > li > a:active:after {
+.piano-midi > ul > li > a:active:before,
+.piano-midi > ul > li > a:active:after {
   content:"";
   position:absolute;
   top:0;
@@ -211,15 +237,15 @@
   transform:rotate(1deg) translateY(-15px);
 }
 
-#nav-piano > ul > li > a:active:after {
+.piano-midi > ul > li > a:active:after {
   top:auto;
   bottom:0;
   transform:rotate(-1deg) translateY(14px);
 }
 
-#nav-piano li ul a:hover {background-color:#fc6}
+.piano-midi li ul a:hover {background-color:#fc6}
 
-#nav-piano li:hover ul {
+.piano-midi li:hover ul {
   visibility:visible;
   opacity:1;
   margin-left:-5px;
