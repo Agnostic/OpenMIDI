@@ -1,3 +1,10 @@
+var openmidi = angular.module('openmidi', []);
+
+openmidi.controller('midiList', ['$scope', function($scope){
+  $scope.playMidi = function(midi){
+
+  };
+}]);
 
 $(document).ready(function() {
 

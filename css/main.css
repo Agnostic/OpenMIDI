@@ -56,7 +56,7 @@
 }
 
 #midi-list > li:hover{
-    background-color:#eee;
+    background-color:#F5F5F5;
 }
 
 #midi-list > li .midi-author{
@@ -73,7 +73,7 @@
     color: #444;
     position:absolute;
     left:7px;
-    top:10px;
+    top:12px;
 }
 
 .search-wrapper input{
@@ -82,7 +82,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-bottom: 7px;
+    /*padding-bottom: 7px;*/
     font-size: 16px;
     background:#F8F8F8;
     color: #000;
@@ -249,4 +249,11 @@
   visibility:visible;
   opacity:1;
   margin-left:-5px;
+}
+
+#footer{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
 }
