@@ -1,3 +1,9 @@
+.logo h1{
+  -moz-transition:all ease-out 0.3s;
+  -webkit-transition:all ease-out 0.3s;
+  transition:all ease-out 0.3s;
+}
+
 .nav>li>a:hover, .nav>li>a:focus{
     color:#444;
 }
@@ -15,6 +21,7 @@
 }
 
 .midi-info{
+    width: 55%;
     margin-left:10px;
     text-align:left;
 }
@@ -27,6 +34,14 @@
 .midi-info2{
     margin-left:10px;
     text-align:right;
+}
+
+.midi-preview .midi-time{
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  color: #FFF;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .midi-info2 p{
@@ -256,4 +271,20 @@
   bottom:0;
   left:0;
   width: 100%;
+}
+
+#midi-list{
+  margin-top:10px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding-right:15px;
+  box-sizing:border-box;
+}
+
+input:focus, select:focus, button:focus, textarea:focus{
+  outline: none !important;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }

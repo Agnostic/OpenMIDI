@@ -14,7 +14,7 @@ if (typeof(MIDI) === "undefined") var MIDI = {};
 
 (function() { "use strict";
 
-var supports = {};	
+var supports = {};
 var canPlayThrough = function (src) {
 	var audio = new Audio();
 	var mime = src.split(";")[0];
@@ -48,7 +48,7 @@ MIDI.audioDetect = function(callback) {
 	if (vorbis) canPlayThrough("audio/ogg;base64,T2dnUwACAAAAAAAAAADqnjMlAAAAAOyyzPIBHgF2b3JiaXMAAAAAAUAfAABAHwAAQB8AAEAfAACZAU9nZ1MAAAAAAAAAAAAA6p4zJQEAAAANJGeqCj3//////////5ADdm9yYmlzLQAAAFhpcGguT3JnIGxpYlZvcmJpcyBJIDIwMTAxMTAxIChTY2hhdWZlbnVnZ2V0KQAAAAABBXZvcmJpcw9CQ1YBAAABAAxSFCElGVNKYwiVUlIpBR1jUFtHHWPUOUYhZBBTiEkZpXtPKpVYSsgRUlgpRR1TTFNJlVKWKUUdYxRTSCFT1jFloXMUS4ZJCSVsTa50FkvomWOWMUYdY85aSp1j1jFFHWNSUkmhcxg6ZiVkFDpGxehifDA6laJCKL7H3lLpLYWKW4q91xpT6y2EGEtpwQhhc+211dxKasUYY4wxxsXiUyiC0JBVAAABAABABAFCQ1YBAAoAAMJQDEVRgNCQVQBABgCAABRFcRTHcRxHkiTLAkJDVgEAQAAAAgAAKI7hKJIjSZJkWZZlWZameZaouaov+64u667t6roOhIasBACAAAAYRqF1TCqDEEPKQ4QUY9AzoxBDDEzGHGNONKQMMogzxZAyiFssLqgQBKEhKwKAKAAAwBjEGGIMOeekZFIi55iUTkoDnaPUUcoolRRLjBmlEluJMYLOUeooZZRCjKXFjFKJscRUAABAgAMAQICFUGjIigAgCgCAMAYphZRCjCnmFHOIMeUcgwwxxiBkzinoGJNOSuWck85JiRhjzjEHlXNOSuekctBJyaQTAAAQ4AAAEGAhFBqyIgCIEwAwSJKmWZomipamiaJniqrqiaKqWp5nmp5pqqpnmqpqqqrrmqrqypbnmaZnmqrqmaaqiqbquqaquq6nqrZsuqoum65q267s+rZru77uqapsm6or66bqyrrqyrbuurbtS56nqqKquq5nqq6ruq5uq65r25pqyq6purJtuq4tu7Js664s67pmqq5suqotm64s667s2rYqy7ovuq5uq7Ks+6os+75s67ru2rrwi65r66os674qy74x27bwy7ouHJMnqqqnqq7rmarrqq5r26rr2rqmmq5suq4tm6or26os67Yry7aumaosm64r26bryrIqy77vyrJui67r66Ys67oqy8Lu6roxzLat+6Lr6roqy7qvyrKuu7ru+7JuC7umqrpuyrKvm7Ks+7auC8us27oxuq7vq7It/KosC7+u+8Iy6z5jdF1fV21ZGFbZ9n3d95Vj1nVhWW1b+V1bZ7y+bgy7bvzKrQvLstq2scy6rSyvrxvDLux8W/iVmqratum6um7Ksq/Lui60dd1XRtf1fdW2fV+VZd+3hV9pG8OwjK6r+6os68Jry8ov67qw7MIvLKttK7+r68ow27qw3L6wLL/uC8uq277v6rrStXVluX2fsSu38QsAABhwAAAIMKEMFBqyIgCIEwBAEHIOKQahYgpCCKGkEEIqFWNSMuakZM5JKaWUFEpJrWJMSuaclMwxKaGUlkopqYRSWiqlxBRKaS2l1mJKqcVQSmulpNZKSa2llGJMrcUYMSYlc05K5pyUklJrJZXWMucoZQ5K6iCklEoqraTUYuacpA46Kx2E1EoqMZWUYgupxFZKaq2kFGMrMdXUWo4hpRhLSrGVlFptMdXWWqs1YkxK5pyUzDkqJaXWSiqtZc5J6iC01DkoqaTUYiopxco5SR2ElDLIqJSUWiupxBJSia20FGMpqcXUYq4pxRZDSS2WlFosqcTWYoy1tVRTJ6XFklKMJZUYW6y5ttZqDKXEVkqLsaSUW2sx1xZjjqGkFksrsZWUWmy15dhayzW1VGNKrdYWY40x5ZRrrT2n1mJNMdXaWqy51ZZbzLXnTkprpZQWS0oxttZijTHmHEppraQUWykpxtZara3FXEMpsZXSWiypxNhirLXFVmNqrcYWW62ltVprrb3GVlsurdXcYqw9tZRrrLXmWFNtBQAADDgAAASYUAYKDVkJAEQBAADGMMYYhEYpx5yT0ijlnHNSKucghJBS5hyEEFLKnINQSkuZcxBKSSmUklJqrYVSUmqttQIAAAocAAACbNCUWByg0JCVAEAqAIDBcTRNFFXVdX1fsSxRVFXXlW3jVyxNFFVVdm1b+DVRVFXXtW3bFn5NFFVVdmXZtoWiqrqybduybgvDqKqua9uybeuorqvbuq3bui9UXVmWbVu3dR3XtnXd9nVd+Bmzbeu2buu+8CMMR9/4IeTj+3RCCAAAT3AAACqwYXWEk6KxwEJDVgIAGQAAgDFKGYUYM0gxphhjTDHGmAAAgAEHAIAAE8pAoSErAoAoAADAOeecc84555xzzjnnnHPOOeecc44xxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY0wAwE6EA8BOhIVQaMhKACAcAABACCEpKaWUUkoRU85BSSmllFKqFIOMSkoppZRSpBR1lFJKKaWUIqWgpJJSSimllElJKaWUUkoppYw6SimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaVUSimllFJKKaWUUkoppRQAYPLgAACVYOMMK0lnhaPBhYasBAByAwAAhRiDEEJpraRUUkolVc5BKCWUlEpKKZWUUqqYgxBKKqmlklJKKbXSQSihlFBKKSWUUkooJYQQSgmhlFRCK6mEUkoHoYQSQimhhFRKKSWUzkEoIYUOQkmllNRCSB10VFIpIZVSSiklpZQ6CKGUklJLLZVSWkqpdBJSKamV1FJqqbWSUgmhpFZKSSWl0lpJJbUSSkklpZRSSymFVFJJJYSSUioltZZaSqm11lJIqZWUUkqppdRSSiWlkEpKqZSSUmollZRSaiGVlEpJKaTUSimlpFRCSamlUlpKLbWUSkmptFRSSaWUlEpJKaVSSksppRJKSqmllFpJKYWSUkoplZJSSyW1VEoKJaWUUkmptJRSSymVklIBAEAHDgAAAUZUWoidZlx5BI4oZJiAAgAAQABAgAkgMEBQMApBgDACAQAAAADAAAAfAABHARAR0ZzBAUKCwgJDg8MDAAAAAAAAAAAAAACAT2dnUwAEAAAAAAAAAADqnjMlAgAAADzQPmcBAQA=");
 	if (mpeg) canPlayThrough("audio/mpeg;base64,/+MYxAAAAANIAUAAAASEEB/jwOFM/0MM/90b/+RhST//w4NFwOjf///PZu////9lns5GFDv//l9GlUIEEIAAAgIg8Ir/JGq3/+MYxDsLIj5QMYcoAP0dv9HIjUcH//yYSg+CIbkGP//8w0bLVjUP///3Z0x5QCAv/yLjwtGKTEFNRTMuOTeqqqqqqqqqqqqq/+MYxEkNmdJkUYc4AKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq");
 	// lets find out!
-	var time = (new Date()).getTime(); 
+	var time = (new Date()).getTime();
 	var interval = window.setInterval(function() {
 		for (var key in supports) {}
 		var now = (new Date()).getTime();
@@ -80,7 +80,7 @@ if (typeof (MIDI.Soundfont) === "undefined") MIDI.Soundfont = {};
 (function() { "use strict";
 
 // Turn on to get "onprogress" event. XHR will not work from file://
-var USE_XHR = false; 
+var USE_XHR = false;
 
 MIDI.loadPlugin = function(conf) {
 	if (typeof(conf) === "function") conf = { callback: conf };
@@ -89,7 +89,7 @@ MIDI.loadPlugin = function(conf) {
 	if (typeof(instruments) !== "object") instruments = [ instruments ];
 	instruments.map(function(data) {
 		if (typeof(data) === "number") data = MIDI.GeneralMIDI.byId[data];
-		return data;		
+		return data;
 	});
 	///
 	MIDI.soundfontUrl = conf.soundfontUrl || MIDI.soundfontUrl || "./soundfont/";
@@ -213,10 +213,10 @@ connect.webaudio = function(filetype, instruments, callback) {
 /// Helpers
 
 var plugins = {
-	"#webmidi": true, 
-	"#webaudio": true, 
-	"#audiotag": true, 
-	"#flash": true 
+	"#webmidi": true,
+	"#webaudio": true,
+	"#audiotag": true,
+	"#flash": true
 };
 
 var getPercent = function(event) {
@@ -252,7 +252,7 @@ var createQueue = function(conf) {
 	--------------------------------------------
 	https://github.com/mudcube/MIDI.js
 	--------------------------------------------
-	Inspired by javax.sound.midi (albeit a super simple version): 
+	Inspired by javax.sound.midi (albeit a super simple version):
 		http://docs.oracle.com/javase/6/docs/api/javax/sound/midi/package-summary.html
 	--------------------------------------------
 	Technologies:
@@ -307,14 +307,14 @@ if (typeof (MIDI) === "undefined") var MIDI = {};
 			output.send([0x90 + channel, note, velocity], delay * 1000);
 		}
 	};
-	
+
 	root.chordOff = function (channel, chord, delay) {
 		for (var n = 0; n < chord.length; n ++) {
 			var note = chord[n];
 			output.send([0x80, channel, note, velocity], delay * 1000);
 		}
 	};
-	
+
 	root.stopAllNotes = function () {
 		for (var channel = 0; channel < 16; channel ++) {
 			output.send([0xB0 + channel, 0x7B, 0]);
@@ -324,7 +324,7 @@ if (typeof (MIDI) === "undefined") var MIDI = {};
 	root.getInput = function () {
 		return plugin.getInputs();
 	};
-	
+
 	root.getOutputs = function () {
 		return plugin.getOutputs();
 	};
@@ -431,7 +431,7 @@ if (window.AudioContext || window.webkitAudioContext) (function () {
 		if (delay < ctx.currentTime) delay += ctx.currentTime;
 		var source = sources[channel + "" + note];
 		if (!source) return;
-		// @Miranet: "the values of 0.2 and 0.3 could ofcourse be used as 
+		// @Miranet: "the values of 0.2 and 0.3 could ofcourse be used as
 		// a 'release' parameter for ADSR like time settings."
 		source.gain.linearRampToValueAtTime(1, delay);
 		source.gain.linearRampToValueAtTime(0, delay + 0.2);
@@ -495,7 +495,7 @@ if (window.Audio) (function () {
 
 	var root = MIDI.AudioTag = {};
 	var note2id = {};
-	var volume = 1; // floating point 
+	var volume = 1; // floating point
 	var channel_nid = -1; // current channel
 	var channels = []; // the audio channels
 	var notes = {}; // the piano keys
@@ -537,11 +537,11 @@ if (window.Audio) (function () {
 			playChannel(channel, id);
 		}
 	};
-	
+
 	root.noteOff = function (channel, note, delay) {
 
 	};
-	
+
 	root.chordOn = function (channel, chord, velocity, delay) {
 		for (var key in chord) {
 			var n = chord[key];
@@ -550,11 +550,11 @@ if (window.Audio) (function () {
 			playChannel(channel, id);
 		}
 	};
-	
+
 	root.chordOff = function (channel, chord, delay) {
 
 	};
-	
+
 	root.stopAllNotes = function () {
 		for (var nid = 0, length = channels.length; nid < length; nid++) {
 			channels[nid].pause();
@@ -587,7 +587,7 @@ if (window.Audio) (function () {
 	http://www.schillmania.com/projects/soundmanager2/
 	--------------------------------------------
 */
-	
+
 (function () {
 
 	var root = MIDI.Flash = {};
@@ -609,7 +609,7 @@ if (window.Audio) (function () {
 		note = id + "" + noteReverse[note];
 		if (!notes[note]) return;
 		if (delay) {
-			return window.setTimeout(function() { 
+			return window.setTimeout(function() {
 				notes[note].play({ volume: velocity * 2 });
 			}, delay * 1000);
 		} else {
@@ -660,7 +660,7 @@ if (window.Audio) (function () {
 					multiShot: true,
 					autoLoad: true,
 					onload: onload
-				});			
+				});
 			};
 			for (var instrument in MIDI.Soundfont) {
 				var loaded = [];
@@ -719,8 +719,8 @@ MIDI.GeneralMIDI = (function (arr) {
 			if (!instrument) continue;
 			var num = parseInt(instrument.substr(0, instrument.indexOf(" ")), 10);
 			instrument = instrument.replace(num + " ", "");
-			ret.byId[--num] = 
-			ret.byName[clean(instrument)] = 
+			ret.byId[--num] =
+			ret.byName[clean(instrument)] =
 			ret.byCategory[clean(key)] = {
 				id: clean(instrument),
 				instrument: instrument,
@@ -802,8 +802,8 @@ if (typeof (MIDI.Player) === "undefined") MIDI.Player = {};
 var root = MIDI.Player;
 root.callback = undefined; // your custom callback goes here!
 root.currentTime = 0;
-root.endTime = 0; 
-root.restart = 0; 
+root.endTime = 0;
+root.restart = 0;
 root.playing = false;
 root.timeWarp = 1;
 
@@ -899,7 +899,7 @@ root.loadFile = function (file, callback) {
 	}
 	///
 	var title = file.split(" - ")[1] || file;
-	document.getElementById("playback-title").innerHTML = title.replace(".mid","");
+	// document.getElementById("playback-title").innerHTML = title.replace(".mid","");
 	///
 	var fetch = new XMLHttpRequest();
 	fetch.open('GET', file);
@@ -925,7 +925,7 @@ root.loadFile = function (file, callback) {
 // Playing the audio
 
 var eventQueue = []; // hold events to be triggered
-var queuedTime; // 
+var queuedTime; //
 var startTime = 0; // to measure time elapse
 var noteRegistrar = {}; // get event for requested note
 var onMidiEvent = undefined; // listener callback
@@ -987,7 +987,7 @@ var startAudio = function (currentTime, fromCache) {
 	var note;
 	var offset = 0;
 	var messages = 0;
-	var data = root.data;	
+	var data = root.data;
 	var ctx = getContext();
 	var length = data.length;
 	//
@@ -1078,13 +1078,13 @@ var stopAudio = function () {
 		},
 		onload: function(response) {
 			console.log(response.responseText);
-		}, 
+		},
 		onprogress: function (event) {
 			var percent = event.loaded / event.total * 100 >> 0;
 			loader.message("loading: " + percent + "%");
 		}
 	});
-	
+
 */
 
 if (typeof(DOMLoader) === "undefined") var DOMLoader = {};
@@ -1215,7 +1215,7 @@ if (typeof ((new XMLHttpRequest()).responseText) === "undefined") {
 					console.log(1)
 				}
 			},
-			{ 
+			{
 				src: "../inc/downloadify/js/swfobject.js",
 				verify: "swfobject",
 				callback: function() {
@@ -1254,14 +1254,14 @@ DOMLoader.script.prototype.add = function(config) {
 	}
 	var srcs = config.srcs;
 	if (typeof(srcs) === "undefined") {
-		srcs = [{ 
-			src: config.src, 
+		srcs = [{
+			src: config.src,
 			verify: config.verify
 		}];
 	}
 	/// adding the elements to the head
 	var doc = document.getElementsByTagName("head")[0];
-	/// 
+	///
 	var testElement = function(element, test) {
 		if (that.loaded[element.src]) return;
 		if (test && typeof(window[test]) === "undefined") return;
@@ -1287,7 +1287,7 @@ DOMLoader.script.prototype.add = function(config) {
 			if (typeof(element.test) === "object") {
 				for (var key in element.test) {
 					batchTest.push(element.test[key]);
-				}			
+				}
 			} else {
 				batchTest.push(element.test);
 			}

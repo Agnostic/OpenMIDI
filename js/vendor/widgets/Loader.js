@@ -1,4 +1,4 @@
-/* 
+/*
 	----------------------------------------------------
 	Loader.js : 0.4.2 : 2012/11/09
 	----------------------------------------------------
@@ -6,7 +6,7 @@
 	----------------------------------------------------
 	/// Simple setup.
 	var loader = new widgets.Loader;
-	
+
 	/// More complex setup.
 	var loader = new widgets.Loader({
 		id: "loader",
@@ -21,10 +21,10 @@
 			// call function once loader has completed
 		},
 		onstart: function() {
-			// call function once loader has started	
+			// call function once loader has started
 		}
 	});
-	
+
 	/// Add a new message to the queue.
 	var loaderId = loader.add({
 		message: "test",
@@ -32,15 +32,15 @@
 			return progress; // value between 1-100
 		}
 	});
-	
+
 	/// Remove a specific loader message.
-	loader.remove(loaderId); 
-	
+	loader.remove(loaderId);
+
 	/// Recenter the loader within container (run onresize)
-	loader.center(); 
-	
+	loader.center();
+
 	/// Stop all loader instances.
-	loader.stop(); 
+	loader.stop();
 */
 
 if (typeof (widgets) === "undefined") var widgets = {};
@@ -124,11 +124,11 @@ widgets.Loader = function (configure) {
 	this.message = function (message, onstart) {
 		if (!this.interval) return this.start(onstart, message);
 		return this.add({
-			message: message, 
+			message: message,
 			onstart: onstart
 		});
 	};
-	
+
 	this.update = function(id, message, percent) {
 		if (!id) for (var id in this.messages);
 		if (!id) return this.message(message);
@@ -145,7 +145,7 @@ widgets.Loader = function (configure) {
 		///
 		item.element.innerHTML = message;
 	};
-	
+
 	this.add = function (conf) {
 		if (typeof(conf) === "string") conf = { message: conf };
 		var background = configure.background ? configure.background : "rgba(0,0,0,0.65)";
@@ -203,7 +203,7 @@ widgets.Loader = function (configure) {
 		/// Return identifier.
 		return seed;
 	};
-	
+
 	this.remove = function (seed) {
 		iteration += 0.07;
 		var timestamp = (new Date()).getTime();
@@ -220,15 +220,15 @@ widgets.Loader = function (configure) {
 			}
 		}
 	};
-	
+
 	this.start = function (onstart, message) {
 		if (!(message || configure.message)) return;
 		return this.add({
-			message: message || configure.message, 
+			message: message || configure.message,
 			onstart: onstart
 		});
 	};
-	
+
 	this.stop = function () {
 		this.remove();
 		window.clearInterval(this.interval);
@@ -238,6 +238,7 @@ widgets.Loader = function (configure) {
 			div.style.cssText += "pointer-events: none;";
 			window.setTimeout(function() {
 				that.div.style.opacity = 0;
+				that.div.style.display = "none";
 			}, 1);
 			window.setTimeout(function () {
 				if (that.interval) return;
