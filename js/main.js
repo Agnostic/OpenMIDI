@@ -1,9 +1,8 @@
 var openMidi = angular.module('openmidi', []);
 
-openMidi.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-  $locationProvider.html5Mode(true);
-
-  console.log($routeProvider);
+openMidi.config(['$routeProvider', '$locationProvider', function($router, $locationProv){
+  $locationProv.html5Mode(true);
+  console.log($router);
 }]);
 
 openMidi.apply = function(s){
@@ -124,7 +123,7 @@ openMidi.controller('midiList', ['$scope', function($scope){
       } else {
         $scope.actualMidi.playing = true;
         $scope.playing = true;
-        player.start();
+        player.resume();
       }
     } else {
       if($scope.actualMidi){
